@@ -44,7 +44,7 @@ export default function Index() {
                     <h1>Twenty <span>Shop</span></h1>
                     <p> Somos un equipo para optimizar y obtener el mejor rendimiento de sus juegos favoritos: Valorant, Fortnite y Minecraft. Puedes comprar en nuestra tienda las optimizaciones y esto estará respaldado por el mejor experto en juegos de computadora.</p>
                 </div>
-                <a href="https://discord.gg/bAME2FnTdG" target="_blank" className="button">Obtener</a>
+                <a href="https://discord.gg/bAME2FnTdG" className="button">Obtener</a>
             </div>
 
             <b className="hr"></b>
