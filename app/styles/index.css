@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+
+/*Landing*/
+body {
+    color: White;
+
+}
+
+.Landing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 20vh;
+    margin-bottom: 25vh;
+}
+
+.Landing>img {
+    height: 10vh;
+}
+
+.texto {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2vh;
+    flex-wrap: wrap;
+    width: 50%;
+}
+
+.texto>h1>span {
+    color: rgba(55, 20, 84, 1);
+    outline: 0.5vh white;
+}
+
+.texto h1 {
+
+
+    font-size: 4.4vh;
+
+}
+
+.texto p {
+    font-size: 2.3vh;
+}
+
+.texto>h1,
+p {
+
+    color: rgba(255, 255, 255, 0.8)
+}
+
+/*Button GLitch*/
+
+.button,
+.button::after {
+    padding: 16px 20px;
+    font-size: 18px;
+    background: linear-gradient(45deg, transparent 5%, rgb(28, 28, 28) 5%);
+    border: 0;
+    color: #fff;
+    letter-spacing: 2px;
+    text-decoration: none;
+    line-height: 1;
+    box-shadow: 6px 0px 0px #371454;
+    outline: transparent;
+    position: relative;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 2.3vh;
+}
+
+.button::after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+    content: "Obtener";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 3%, #371454 3%, #371454 5%, #cc3030 5%);
+    text-shadow: -3px -3px 0px #e0db3d, 3px 3px 0px #371454;
+    clip-path: var(--slice-0);
+}
+
+.button:hover::after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
+    }
+
+    10% {
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
+    }
+
+    20% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 10px);
+    }
+
+    30% {
+        clip-path: var(--slice-3);
+        transform: translate(0px, 5px);
+    }
+
+    40% {
+        clip-path: var(--slice-2);
+        transform: translate(-5px, 0px);
+    }
+
+    50% {
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
+    }
+
+    60% {
+        clip-path: var(--slice-4);
+        transform: translate(5px, 10px);
+    }
+
+    70% {
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
+    }
+
+    80% {
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
+    }
+
+    90% {
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
+    }
+
+    100% {
+        clip-path: var(--slice-1);
+        transform: translate(0);
+    }
+}
+
+.optis,
+.resenas {
+
+    text-align: center;
+
+
+}
+
+.OptiDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+}
+
+.optis {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.optis,
+.resenas>h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+h1>span {
+    color: rgba(55, 20, 84, 1);
+}
+
+.Features {
+    transition: all 300ms;
+
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    padding: 28px;
+    text-align: justify;
+    gap: 24px;
+    /* width: 200px; */
+    /* height: 50px; */
+    /* left: 1020px; */
+    /* top: 184px; */
+    background: rgb(25 25 25);
+    border-radius: 12px;
+    align-content: center;
+    justify-content: center;
+}
+
+.Features .ImgDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
+    gap: 10px;
+    width: 30px;
+    top: 1vh;
+    position: relative;
+    height: 30px;
+    background: rgba(78, 78, 78, .2);
+    border-radius: 10px;
+    /* flex: none; */
+    /* order: 0; */
+    /* flex-grow: 0;*/
+}
+
+.ImgDiv img {
+    /* Icon / briefcase-outline */
+
+
+    width: 30px;
+    height: 30px;
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.Features .TextDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 156px;
+    /* height: 68px; */
+    bottom: 1vh;
+    position: relative;
+    /* flex: none; */
+    /* order: 1; */
+    /* flex-grow: 1; */
+    justify-content: center;
+    align-content: center;
+}
+
+.TextDiv h1 {
+    /* 160 */
+
+
+    width: 156px;
+    height: 40px;
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 15px;
+    line-height: 40px;
+    /* identical to box height, or 118% */
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FFFFFF;
+
+    flex-wrap: wrap;
+
+    /* Inside auto layout */
+    margin: 0;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.TextDiv p {
+    /* Current Jobs */
+
+    text-align: initial;
+    width: 156px;
+    height: 24px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 24px;
+    /* identical to box height, or 120% */
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    color: rgba(255, 255, 255, 0.8);
+
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+
+
+.Features:hover {
+    scale: 1.1;
+}
+
+.FeaturesDiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hr {
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: relative;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    background-color: rgb(33, 33, 33);
+    /* padding: 2em 0; */
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    font-family: 'Lato', sans-serif;
+    background: rgb(25 25 25);
+    border-radius: 15px;
+    transition: all 300ms;
+
+}
+
+.e {
+    width: 210px;
+    height: 274px;
+}
+
+.card .card-border-top {
+    width: 60%;
+    height: 3%;
+    background: rgba(55, 20, 84, 1);
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.card:hover {
+    scale: 1.1;
+}
+
+.card span {
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.card .job {
+    font-weight: 400;
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 3px;
+    font-size: 13px;
+    font-family: 'Lato', sans-serif;
+
+    list-style: circle;
+
+
+}
+
+.card .img {
+    width: 70px;
+
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#s {
+    width: 55%;
+}
+
+.centerSec {
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+
+    text-align: center;
+
+}
+
+.planes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+@media only screen and (max-width: 768px) {
+    #s {
+        width: 95%;
+    }
+}

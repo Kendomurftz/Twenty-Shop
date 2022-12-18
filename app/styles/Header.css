@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300&display=swap');
+
+html,
+body {
+    margin: 0;
+}
+
+main {
+    background: rgb(55, 20, 84);
+    background: linear-gradient(165deg, rgba(55, 20, 84, 1) 9%, rgba(23, 23, 23, 1) 25%);
+}
+
+
+
+#hamItems>div {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+#hamItems {
+    width: 100%;
+}
+
+#hamNav {
+    display: flex;
+    justify-content: center;
+}
+
+#hamItems {
+    display: flex;
+}
+
+#hamNav>img {
+    height: 4vh;
+}
+
+/* (A2) HIDE HAMBURGER ICON */
+#hamNav label,
+#hamburger {
+    display: none;
+}
+
+/* (B) ON SMALL SCREEN */
+@media only screen and (max-width: 768px) {
+
+    /* (B1) SHOW HAMBURGER ICON */
+    #hamNav label {
+        display: inline-block;
+        float: right;
+    }
+
+    /* (B2) BREAK ITEMS INTO SINGLE COLUMN */
+    #hamItems {
+        flex-wrap: wrap;
+    }
+
+    /* (B3) TOGGLE SHOW/HIDE */
+    #hamItems {
+        display: none;
+    }
+
+    #hamNav input:checked~#hamItems {
+        display: flex;
+    }
+
+    #hamItems a {
+        width: 100%;
+    }
+
+    #hamNav {
+        background-color: rgba(23, 23, 23, 0.8);
+        justify-content: left;
+
+    }
+}
+
+/* (X) NOT IMPORTANT - COSMETICS */
+#hamNav label {
+    font-size: 1.5em;
+}
+
+#hamNav,
+#hamItems a {
+    padding: 10px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.4vh;
+}
+
+#hamItems a:hover {
+    color: #fff;
+}
+
+d+label:before {
+    content: "\00d7"
+}
+
+#menu input:checked~ul {
+    display: block;
+}
+
+
+
+footer{
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+    background: rgb(25 25 25);
+
+}
+
+footer > p> span{
+    color: rgb(69, 33, 99);
+
+}
